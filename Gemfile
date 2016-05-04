@@ -35,8 +35,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
-  gem 'rspec-rails' #'2.13.1'
-
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'spork-rails'#, '4.0.0'
+  gem 'guard-spork'#, '1.5.0'
+  gem 'childprocess'#, '0.3.6'
 end
 
 group :test do
@@ -46,13 +51,12 @@ group :test do
   gem 'spring'
   gem 'selenium-webdriver' #'2.35.1'
   gem 'capybara' #'2.1.0'
-  # gem 'guard'
-  # gem 'guard-minitest'
   gem 'test-unit'
+  gem 'libnotify'
 end
 
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor' #'0.0.2'
 end
-gem 'web-console', group: :development
+gem 'web-console', '2.0', group: :development
